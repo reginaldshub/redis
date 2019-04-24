@@ -1,4 +1,4 @@
-#Redis:
+Redis:
 --------------------------------------------------------------------------------------
 **Redis is a datastructure and combination of NoSQL and memCache
 It is fast so widely used
@@ -34,7 +34,7 @@ redis-cli --version   mine is 4.0.9
 	 rename foo regi (renamed foo key with regi. value will be same. foo becomes nil)
 
 ---
- > ###working with Lists:
+> working with Lists:
 * lpush people regi
 * lpush people anthony
 * lpush people tony 
@@ -46,7 +46,7 @@ redis-cli --version   mine is 4.0.9
 * lpop people (pop's first element from left)
 * rpop people (pop's first element from right)
 
- 	> ###Working with Sets: SADD
+> Working with Sets: SADD
 * sadd cars "ford"
 * sadd cars "maruthi"
 * sadd cars "suzuki" 
@@ -56,7 +56,7 @@ redis-cli --version   mine is 4.0.9
 * smove cars newcars maruti (moves maruthi to new cars set)
 * srem cars suzuki (removes suzuki from cars set) 
 
-	> ###working with sorted sets: ZADD
+> working with sorted sets: ZADD
 * zadd users 1997 "reginald"
 * zadd users 1996 "anthony"
 * zadd users 1989 "brother"
@@ -66,7 +66,7 @@ redis-cli --version   mine is 4.0.9
 * zrange users 0 -1 (display contents of users set)
 * zincrby users 1 "anthony" (increments anthony by 1 => 1997)
 
-	> ###Working with hashes: HSET
+> Working with hashes: HSET
 * hset user:regi name reginald
 * hset user:regi email reginald@gmail.com
 * hget user:regi name
@@ -78,7 +78,7 @@ redis-cli --version   mine is 4.0.9
 * hdel user:regi age
 
 
-	> ###PERSISTENCE
+> PERSISTENCE
 Snapshot and AOF
 * save 60 1000 (every 60 seconds if at least 1000 keys changed)
 * check the file dump.rdb in admin:///var/lib/redis
