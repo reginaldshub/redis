@@ -1,7 +1,7 @@
 Redis:
 --------------------------------------------------------------------------------------
-**Redis is a datastructure and combination of NoSQL and memCache\n
-It is fast, so widely used.\n
+**Redis is a datastructure and combination of NoSQL and memCache<br />
+It is fast so widely used.<br />
 we can enable the persistance property to store to the memory**
 
 > First step is to install the redis from official website
