@@ -16,22 +16,22 @@ redis-cli --version   mine is 4.0.9
 > To open the cli  redis-cli
 
 > Test the cli by following
-	* ping  prints out PONG
-	* quit to quit from cli
-	* set foo 100
-	* get foo
-	* incr foo (increments value of foo)
-	* decr foo (decrements value of foo)
-	* exists foo (returns 1 if exist else 0)
-	* del foo (deletes and returns 1 is success else 0)
-	* flushall (clears everything)
-	* expire foo 10 (foo gets deleted after 10 seconds)
-	* ttl foo (gives the remaining time to expire)
-	* setex foo 10 "HEY" (setting value with expiration)
-	* persist foo (even if key expires the value is retained)
-	* mset foo "hello" bar "world!!!!!" (multiple key value setting)
-	* append foo world (appending the value)
-	* rename foo regi (renamed foo key with regi. value will be same. foo becomes nil)
+	 1.ping  prints out PONG
+	 2.quit to quit from cli
+	 3.set foo 100
+	 4.get foo
+	 5.incr foo (increments value of foo)
+	 6.decr foo (decrements value of foo)
+	 7.exists foo (returns 1 if exist else 0)
+	 8.del foo (deletes and returns 1 is success else 0)
+	 9.flushall (clears everything)
+	 10.expire foo 10 (foo gets deleted after 10 seconds)
+	 11.ttl foo (gives the remaining time to expire)
+	 12.setex foo 10 "HEY" (setting value with expiration)
+	 13.persist foo (even if key expires the value is retained)
+	 14.mset foo "hello" bar "world!!!!!" (multiple key value setting)
+	 15.append foo world (appending the value)
+	 16.rename foo regi (renamed foo key with regi. value will be same. foo becomes nil)
 
 	
 	> Working with Lists:
