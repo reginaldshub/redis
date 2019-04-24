@@ -33,8 +33,7 @@ redis-cli --version   mine is 4.0.9
 	 15.append foo world (appending the value)
 	 16.rename foo regi (renamed foo key with regi. value will be same. foo becomes nil)
 
-	
-	> Working with Lists:
+ 	> working with Lists:
 
 * lpush people regi
 * lpush people anthony
