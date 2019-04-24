@@ -1,40 +1,40 @@
-Redis:
+#Redis:
 --------------------------------------------------------------------------------------
-Redis is a datastructure and combination of NoSQL and memCache
+**Redis is a datastructure and combination of NoSQL and memCache
 It is fast so widely used
-we can enable the persistance property to store to the memory
+we can enable the persistance property to store to the memory**
 
 > First step is to install the redis from official website
 redis-cli --version   mine is 4.0.9
 
-> To start the redis server /etc/init.d/redis-server start
+> To start the redis server  -->   /etc/init.d/redis-server start
 
-> To stop the redis server /etc/init.d/redis-server stop
+> To stop the redis server -->  /etc/init.d/redis-server stop
 
-> To restart the redis server /etc/init.d/redis-server restart
+> To restart the redis server  -->  /etc/init.d/redis-server restart
 
-> To open the cli  redis-cli
+> To open the cli  --> redis-cli
 
-> Test the cli by following
-	 1.ping  prints out PONG
-	 2.quit to quit from cli
-	 3.set foo 100
-	 4.get foo
-	 5.incr foo (increments value of foo)
-	 6.decr foo (decrements value of foo)
-	 7.exists foo (returns 1 if exist else 0)
-	 8.del foo (deletes and returns 1 is success else 0)
-	 9.flushall (clears everything)
-	 10.expire foo 10 (foo gets deleted after 10 seconds)
-	 11.ttl foo (gives the remaining time to expire)
-	 12.setex foo 10 "HEY" (setting value with expiration)
-	 13.persist foo (even if key expires the value is retained)
-	 14.mset foo "hello" bar "world!!!!!" (multiple key value setting)
-	 15.append foo world (appending the value)
-	 16.rename foo regi (renamed foo key with regi. value will be same. foo becomes nil)
+### Test the cli by following
+	 ping  prints out PONG
+	 quit to quit from cli
+	 set foo 100
+	 get foo
+	 incr foo (increments value of foo)
+	 decr foo (decrements value of foo)
+	 exists foo (returns 1 if exist else 0)
+	 del foo (deletes and returns 1 is success else 0)
+	 flushall (clears everything)
+	 expire foo 10 (foo gets deleted after 10 seconds)
+	 ttl foo (gives the remaining time to expire)
+	 setex foo 10 "HEY" (setting value with expiration)
+	 persist foo (even if key expires the value is retained)
+	 mset foo "hello" bar "world!!!!!" (multiple key value setting)
+	 append foo world (appending the value)
+	 rename foo regi (renamed foo key with regi. value will be same. foo becomes nil)
 
- 	> working with Lists:
-
+---
+ > ###working with Lists:
 * lpush people regi
 * lpush people anthony
 * lpush people tony 
@@ -46,7 +46,7 @@ redis-cli --version   mine is 4.0.9
 * lpop people (pop's first element from left)
 * rpop people (pop's first element from right)
 
- 	> Working with Sets: SADD
+ 	> ###Working with Sets: SADD
 * sadd cars "ford"
 * sadd cars "maruthi"
 * sadd cars "suzuki" 
@@ -56,7 +56,7 @@ redis-cli --version   mine is 4.0.9
 * smove cars newcars maruti (moves maruthi to new cars set)
 * srem cars suzuki (removes suzuki from cars set) 
 
-	> working with sorted sets: ZADD
+	> ###working with sorted sets: ZADD
 * zadd users 1997 "reginald"
 * zadd users 1996 "anthony"
 * zadd users 1989 "brother"
@@ -66,7 +66,7 @@ redis-cli --version   mine is 4.0.9
 * zrange users 0 -1 (display contents of users set)
 * zincrby users 1 "anthony" (increments anthony by 1 => 1997)
 
-	> Working with hashes: HSET
+	> ###Working with hashes: HSET
 * hset user:regi name reginald
 * hset user:regi email reginald@gmail.com
 * hget user:regi name
@@ -78,12 +78,10 @@ redis-cli --version   mine is 4.0.9
 * hdel user:regi age
 
 
-	> PERSISTENCE
+	> ###PERSISTENCE
 Snapshot and AOF
 * save 60 1000 (every 60 seconds if at least 1000 keys changed)
-
-check the file dump.rdb in admin:///var/lib/redis
- 
-to update config file for AOF
-open redis.conf from admin:///etc/redis
-change appendonly to yes from no
+* check the file dump.rdb in admin:///var/lib/redis
+*  to update config file for AOF
+	*open redis.conf from admin:///etc/redis
+	*change appendonly to yes from no
